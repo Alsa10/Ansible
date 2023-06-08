@@ -1,5 +1,5 @@
 - name: Demo on standard loops
-  hosts: all
+  hosts: ansible-node1
   tasks:
     - name: print multiple values
       debug:
@@ -13,7 +13,7 @@
 
 
 - name: Demo in standard loops for hash
-  hosts: all
+  hosts: ansible-node2
   tasks:
     - name: print Name and and Email
       debug:

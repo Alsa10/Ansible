@@ -1,0 +1,23 @@
+- name: Demo on standard loops
+  hosts: all
+  tasks:
+    - name: print multiple values
+      debug:
+        msg: "Hello, {{item}} "
+
+      loop:
+        - RAJU
+        - RAHUL
+        - RAHIN
+## Above example is for a simple list
+
+
+- name: Demo in standard loops for hash
+  hosts: all
+  tasks:
+    - name: print Name and and Email
+      debug:
+        msg: "Hello, {{item.name}} and your email is {{item.email}}"
+      loop:
+        - {name: "Raju", email: "raju@gmail.com"}
+        - {name: "Rahul", email: "raju@yahoo.com"}
